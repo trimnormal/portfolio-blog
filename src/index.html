@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Zach's Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1rem;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px;
+      background: linear-gradient(to right, #4CAF50, #81C784);
+      color: white;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section {
+      margin: 40px 0;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+
+    .blog-card {
+      background: white;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .blog-card h3 {
+      margin-top: 0;
+      color: #4CAF50;
+    }
+
+    .blog-card p {
+      font-size: 1rem;
+    }
+
+    .blog-card a {
+      color: #4CAF50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .blog-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      color: gray;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#blogs">Blog Posts</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Hi I'm Zach</h1>
+    <p>Your one-stop destination for cloud engineering insights and projects.</p>
+  </div>
+
+  <div class="container">
+    <div id="about" class="section">
+      <h2>About Me</h2>
+      <p>Hi, I'm Zach, a platform engineer with a passion for cloud infrastructure and automation. This blog is where I share my thoughts, projects, and learnings in the tech world.</p>
+    </div>
+
+    <div id="blogs" class="section">
+      <h2>Latest Blog Posts</h2>
+      <div class="blog-card">
+        <h3>Deploying AWS FSx with Terraform</h3>
+        <p>Learn how to efficiently set up AWS FSx for NetApp ONTAP using Terraform modules.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="blog-card">
+        <h3>Hosting a Scalable Minecraft Server on AWS</h3>
+        <p>Step-by-step guide to deploying a multiplayer Minecraft server on ECS with Docker.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+
+    <div id="contact" class="section">
+      <h2>Contact Me</h2>
+      <p>Have questions or want to collaborate? Reach out at <a href="mailto:contact@zacharycorbishley.com">contact@zacharycorbishley.com</a>.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Zachary Corbishley. All rights reserved.
+  </footer>
+</body>
+</html>
