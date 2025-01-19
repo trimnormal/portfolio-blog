@@ -10,11 +10,11 @@
       margin: 0;
       padding: 0;
       color: #333;
-      background-color: #f4f4f4;
+      background-color: #faf7f0;
     }
 
     header {
-      background-color: #4CAF50;
+      background-color: #5c09f5;
       color: white;
       padding: 10px 20px;
       position: sticky;
@@ -34,26 +34,52 @@
     }
 
     .hero {
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 50px 20px;
-      background: linear-gradient(to right, #4CAF50, #81C784);
+      background: linear-gradient(to right, #5c09f5, #c7b281);
       color: white;
+      text-align: left;
     }
 
-    .hero h1 {
+    .hero-content {
+      display: flex;
+      align-items: center;
+      max-width: 1200px;
+      gap: 20px; /* Space between text and image */
+    }
+
+    .hero-text {
+      flex: 1; /* Text takes up remaining space */
+    }
+
+    .hero-text h1 {
       margin: 0;
       font-size: 3rem;
     }
 
-    .hero p {
+    .hero-text p {
       font-size: 1.2rem;
       margin: 10px 0;
+    }
+
+    .hero-image {
+      flex-shrink: 0; /* Prevent image from shrinking */
+      width: 200px; /* Adjust width as needed */
+      height: auto;
+      border-radius: 50%; /* Make the image circular */
+      border: 3px solid #c7b281;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     .container {
       max-width: 1200px;
       margin: auto;
+      background-color: #fffaf3;
       padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .section {
@@ -62,7 +88,7 @@
 
     .section h2 {
       font-size: 2rem;
-      color: #4CAF50;
+      color: #2d2933;
       margin-bottom: 20px;
     }
 
@@ -77,7 +103,7 @@
 
     .blog-card h3 {
       margin-top: 0;
-      color: #4CAF50;
+      color: #5c09f5;
     }
 
     .blog-card p {
@@ -85,7 +111,7 @@
     }
 
     .blog-card a {
-      color: #4CAF50;
+      color: #5c09f5;
       text-decoration: none;
       font-weight: bold;
     }
@@ -94,12 +120,41 @@
       text-decoration: underline;
     }
 
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+      background-color: #fffaf3;
+    }
+
+    .button-container a {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: #5c09f5;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-container a:hover {
+      background-color: #c7b281;
+    }
+
+    .button-container img {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
     footer {
       text-align: center;
-      color: gray;
-      padding: 20px;
-      background-color: #333;
       color: white;
+      padding: 20px;
+      background-color: #5c09f5;
     }
   </style>
 </head>
@@ -113,14 +168,75 @@
   </header>
 
   <div class="hero">
-    <h1>Hi I'm Zach</h1>
-    <p>Your one-stop destination for cloud engineering insights and projects.</p>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Hi, I'm Zach</h1>
+        <p>A cloud engineer with a passion for technology</p>
+      </div>
+      <img src="https://s3.us-east-1.amazonaws.com/www.zacharycorbishley.com/images/Headshot.jpeg" alt="Headshot" class="hero-image">
+    </div>
+  </div>
+  
+  <div class="button-container">
+    <a href="https://www.linkedin.com/in/zachary-corbishley/" target="_blank">
+      <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn">
+      LinkedIn Profile
+    </a>
+    <a href="https://github.com/trimnormal" target="_blank">
+      <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/github.svg" alt="GitHub">
+      GitHub Profile
+    </a>
+    <a href="https://github.com/trimnormal/portfolio-blog" target="_blank">
+      <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/brands/github.svg" alt="Repository">
+      Project Repository
+    </a>
   </div>
 
   <div class="container">
-    <div id="about" class="section">
-      <h2>About Me</h2>
-      <p>Hi, I'm Zach, a platform engineer with a passion for cloud infrastructure and automation. This blog is where I share my thoughts, projects, and learnings in the tech world.</p>
+    <div class="about-section">
+      <h3>Introduction</h3>
+      <p>
+        Welcome to my portfolio! I am a results-driven professional with a strong focus on cloud infrastructure and development. 
+        Currently, I serve as a Platform Engineer at Securian Financial, where I harness my skills in problem-solving and cloud engineering 
+        to design and implement innovative solutions that address complex business challenges.
+      </p>
+      <p>
+        Previously, I worked at Boston Scientific as a Cloud Automation Engineer. There, I gained invaluable experience in automating cloud operations, 
+        which significantly enhanced the efficiency and scalability of the company’s cloud transformation.
+      </p>
+      <p>
+        Throughout my career, I have demonstrated a proven ability to collaborate effectively with cross-functional teams to drive operational excellence 
+        and deliver exceptional results. My passion for technology and emerging trends in cloud infrastructure fuels my commitment to optimizing performance 
+        and enhancing business growth.
+      </p>
+    
+      <h3>Key Skills and Expertise:</h3>
+      <ul>
+        <li><strong>Cloud Engineering:</strong> Expertise in designing, deploying, and managing scalable and secure cloud infrastructure using AWS and Azure.</li>
+        <li><strong>Automation:</strong> Highly proficient in using tools like Terraform, Ansible, and CloudFormation to automate cloud operations and deployments.</li>
+        <li><strong>DevOps Practices:</strong> Strong advocate for DevOps methodologies, including CI/CD, infrastructure as code (IaC), and continuous monitoring 
+        to ensure smooth and efficient operations.</li>
+        <li><strong>Programming:</strong> Skilled in Python, Bash, and other scripting languages to develop custom automation solutions and streamline workflows.</li>
+        <li><strong>Collaboration:</strong> Adept at working with cross-functional teams, including developers, data scientists, and business stakeholders, 
+        to deliver high-impact projects.</li>
+        <li><strong>Problem-Solving:</strong> Ability to analyze complex problems, identify root causes, and develop effective solutions that drive business value.</li>
+        <li><strong>Innovation:</strong> Passionate about exploring and implementing cutting-edge technologies to stay ahead of industry trends and deliver 
+        state-of-the-art solutions.</li>
+      </ul>
+    
+      <h3>Career Highlights:</h3>
+      <ul>
+        <li><strong>Platform Engineer, Securian Financial:</strong> Led the design and implementation of a robust cloud infrastructure that supports 
+        the data team’s analytical and operational needs, resulting in improved performance and scalability.</li>
+        <li><strong>Cloud Automation Engineer, Boston Scientific:</strong> Successfully automated cloud operations, reducing manual intervention and 
+        operational costs while improving system reliability and uptime.</li>
+      </ul>
+    
+      <p>
+        My portfolio is a testament to my dedication to cloud engineering and development. It highlights my journey, projects, and the continuous pursuit of 
+        excellence in optimizing cloud infrastructure to drive business success. I invite you to explore my work and connect with me to discuss potential 
+        collaborations or opportunities.
+      </p>
     </div>
 
     <div id="blogs" class="section">
