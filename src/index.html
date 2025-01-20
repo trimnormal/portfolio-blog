@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Welcome to Zach's Blog</title>
   <style>
+    /* General Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -13,6 +14,7 @@
       background-color: #faf7f0;
     }
 
+    /* Header */
     header {
       background-color: #5c09f5;
       color: white;
@@ -20,6 +22,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
     }
 
     header nav a {
@@ -33,6 +36,7 @@
       text-decoration: underline;
     }
 
+    /* Hero Section */
     .hero {
       display: flex;
       align-items: center;
@@ -73,6 +77,7 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
+    /* Container */
     .container {
       max-width: 1200px;
       margin: auto;
@@ -82,6 +87,7 @@
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
+    /* Section */
     .section {
       margin: 40px 0;
     }
@@ -92,6 +98,7 @@
       margin-bottom: 20px;
     }
 
+    /* Blog Card */
     .blog-card {
       background: white;
       padding: 20px;
@@ -120,6 +127,7 @@
       text-decoration: underline;
     }
 
+    /* Button Container */
     .button-container {
       display: flex;
       justify-content: center;
@@ -150,15 +158,35 @@
       margin-right: 10px;
     }
 
+    /* Footer */
     footer {
       text-align: center;
       color: white;
       padding: 20px;
       background-color: #5c09f5;
+      margin-top: 40px;
+    }
+
+    /* NEW: Improve responsiveness for smaller screens */
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-image {
+        margin-top: 20px;
+      }
+
+      .button-container {
+        flex-direction: column;
+        gap: 15px;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
     <nav>
       <a href="#about">About</a>
@@ -167,6 +195,7 @@
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <div class="hero">
     <div class="hero-content">
       <div class="hero-text">
@@ -176,7 +205,8 @@
       <img src="https://s3.us-east-1.amazonaws.com/www.zacharycorbishley.com/images/Headshot.jpeg" alt="Headshot" class="hero-image">
     </div>
   </div>
-  
+
+  <!-- Button Section -->
   <div class="button-container">
     <a href="https://www.linkedin.com/in/zachary-corbishley/" target="_blank">
       <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn">
@@ -192,73 +222,40 @@
     </a>
   </div>
 
+  <!-- Main Container -->
   <div class="container">
-    <div class="about-section">
-      <h3>Introduction</h3>
+    <!-- About Section -->
+    <div id="about" class="section">
+      <h2>Welcome to my portfolio!</h2>
       <p>
-        Welcome to my portfolio! I am a results-driven professional with a strong focus on cloud infrastructure and development. 
-        Currently, I serve as a Platform Engineer at Securian Financial, where I harness my skills in problem-solving and cloud engineering 
-        to design and implement innovative solutions that address complex business challenges.
+        Hi there, and welcome to my personal site! As part of the Cloud Resume Challenge, 
+        I’ve created a cloud-powered resume that highlights my journey and skills in cloud engineering. 
+        This site isn’t just about showcasing my technical abilities; it’s also a place where I 
+        share what I’ve learned while building cloud solutions and automating infrastructure. 
+        Whether you’re here to explore my projects, see my cloud journey unfold, or connect on cloud 
+        topics, I hope this site inspires both fellow engineers and those looking to learn more about 
+        the cloud!
       </p>
-      <p>
-        Previously, I worked at Boston Scientific as a Cloud Automation Engineer. There, I gained invaluable experience in automating cloud operations, 
-        which significantly enhanced the efficiency and scalability of the company’s cloud transformation.
-      </p>
-      <p>
-        Throughout my career, I have demonstrated a proven ability to collaborate effectively with cross-functional teams to drive operational excellence 
-        and deliver exceptional results. My passion for technology and emerging trends in cloud infrastructure fuels my commitment to optimizing performance 
-        and enhancing business growth.
-      </p>
-    
-      <h3>Key Skills and Expertise:</h3>
-      <ul>
-        <li><strong>Cloud Engineering:</strong> Expertise in designing, deploying, and managing scalable and secure cloud infrastructure using AWS and Azure.</li>
-        <li><strong>Automation:</strong> Highly proficient in using tools like Terraform, Ansible, and CloudFormation to automate cloud operations and deployments.</li>
-        <li><strong>DevOps Practices:</strong> Strong advocate for DevOps methodologies, including CI/CD, infrastructure as code (IaC), and continuous monitoring 
-        to ensure smooth and efficient operations.</li>
-        <li><strong>Programming:</strong> Skilled in Python, Bash, and other scripting languages to develop custom automation solutions and streamline workflows.</li>
-        <li><strong>Collaboration:</strong> Adept at working with cross-functional teams, including developers, data scientists, and business stakeholders, 
-        to deliver high-impact projects.</li>
-        <li><strong>Problem-Solving:</strong> Ability to analyze complex problems, identify root causes, and develop effective solutions that drive business value.</li>
-        <li><strong>Innovation:</strong> Passionate about exploring and implementing cutting-edge technologies to stay ahead of industry trends and deliver 
-        state-of-the-art solutions.</li>
-      </ul>
-    
-      <h3>Career Highlights:</h3>
-      <ul>
-        <li><strong>Platform Engineer, Securian Financial:</strong> Led the design and implementation of a robust cloud infrastructure that supports 
-        the data team’s analytical and operational needs, resulting in improved performance and scalability.</li>
-        <li><strong>Cloud Automation Engineer, Boston Scientific:</strong> Successfully automated cloud operations, reducing manual intervention and 
-        operational costs while improving system reliability and uptime.</li>
-      </ul>
-    
-      <p>
-        My portfolio is a testament to my dedication to cloud engineering and development. It highlights my journey, projects, and the continuous pursuit of 
-        excellence in optimizing cloud infrastructure to drive business success. I invite you to explore my work and connect with me to discuss potential 
-        collaborations or opportunities.
-      </p>
-    </div>
+    <div>
 
+    <!-- Blog Section -->
     <div id="blogs" class="section">
-      <h2>Latest Blog Posts</h2>
+      <h2>Latest Blog Posts (WIP)</h2>
       <div class="blog-card">
-        <h3>Deploying AWS FSx with Terraform</h3>
-        <p>Learn how to efficiently set up AWS FSx for NetApp ONTAP using Terraform modules.</p>
-        <a href="#">Read More</a>
-      </div>
-      <div class="blog-card">
-        <h3>Hosting a Scalable Minecraft Server on AWS</h3>
-        <p>Step-by-step guide to deploying a multiplayer Minecraft server on ECS with Docker.</p>
-        <a href="#">Read More</a>
+        <h3><a href="https://www.zacharycorbishley.com/blog/site-architecture.html">Cloud Resume Site Architecture</a></h3>
+        <p>Learn how this site is designed and deployed!</p>
+        <a href="https://www.zacharycorbishley.com/blog/site-architecture.html">Read More</a>
       </div>
     </div>
 
+    <!-- Contact Section -->
     <div id="contact" class="section">
       <h2>Contact Me</h2>
       <p>Have questions or want to collaborate? Reach out at <a href="mailto:contact@zacharycorbishley.com">contact@zacharycorbishley.com</a>.</p>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Zachary Corbishley. All rights reserved.
   </footer>

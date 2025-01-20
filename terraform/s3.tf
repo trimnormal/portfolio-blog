@@ -74,27 +74,3 @@ data "aws_iam_policy_document" "public_access_root" {
     }
   }
 }
-
-
-
-# S3 Allow Public read access as data object
-# data "aws_iam_policy_document" "allow_public_s3_read" {
-#   statement {
-#     sid    = "PublicReadGetObject"
-#     effect = "Allow"
-
-#     actions = [
-#       "s3:GetObject",
-#     ]
-
-#     principals {
-#       type        = "AWS"
-#       identifiers = ["*"]
-#     }
-
-#     resources = [
-#       "arn:aws:s3:::${var.bucket_name}/*",
-#       "arn:aws:s3:::www-${var.bucket_name}/*"
-#     ]
-#   }
-# }
