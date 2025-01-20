@@ -21,7 +21,7 @@
          position: sticky;
          top: 0;
          z-index: 1000;
-         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
          }
          header nav a {
          color: white;
@@ -46,10 +46,10 @@
          display: flex;
          align-items: center;
          max-width: 1200px;
-         gap: 20px; /* Space between text and image */
+         gap: 20px;
          }
          .hero-text {
-         flex: 1; /* Text takes up remaining space */
+         flex: 1;
          }
          .hero-text h1 {
          margin: 0;
@@ -68,65 +68,24 @@
          border-radius: 8px;
          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
          }
-         /* Section */
-         .section {
+         .diagram-section {
+         text-align: center;
          margin: 40px 0;
          }
-         .section h2 {
-         font-size: 2rem;
-         color: #2d2933;
-         margin-bottom: 20px;
-         }
-         /* Blog Card */
-         .blog-card {
-         background: white;
-         padding: 20px;
-         border: 1px solid #ddd;
-         border-radius: 5px;
-         margin-bottom: 20px;
+         .diagram-section img {
+         max-width: 100%;
+         height: auto;
+         border: 2px solid #ddd;
+         border-radius: 8px;
          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
          }
-         .blog-card h3 {
-         margin-top: 0;
-         color: #5c09f5;
-         }
-         .blog-card p {
+         .diagram-info {
+         margin-top: 20px;
          font-size: 1rem;
-         }
-         .blog-card a {
-         color: #5c09f5;
-         text-decoration: none;
-         font-weight: bold;
-         }
-         .blog-card a:hover {
-         text-decoration: underline;
-         }
-         /* Button Container */
-         .button-container {
-         display: flex;
-         justify-content: center;
-         gap: 20px;
-         margin: 30px 0;
-         background-color: #fffaf3;
-         }
-         .button-container a {
-         display: inline-flex;
-         align-items: center;
-         padding: 10px 20px;
-         background: #5c09f5;
-         color: white;
-         text-decoration: none;
-         border-radius: 5px;
-         font-weight: bold;
-         transition: background-color 0.3s ease;
-         }
-         .button-container a:hover {
-         background-color: #c7b281;
-         }
-         .button-container img {
-         width: 20px;
-         height: 20px;
-         margin-right: 10px;
+         background-color: #f9f9f9;
+         padding: 20px;
+         border-radius: 8px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
          }
          /* Footer */
          footer {
@@ -136,15 +95,10 @@
          background-color: #5c09f5;
          margin-top: 40px;
          }
-         /* NEW: Improve responsiveness for smaller screens */
          @media (max-width: 768px) {
          .hero-content {
          flex-direction: column;
          text-align: center;
-         }
-         .button-container {
-         flex-direction: column;
-         gap: 15px;
          }
          }
       </style>
@@ -153,8 +107,8 @@
       <!-- Header -->
       <header>
          <nav>
-            <a href="#about">About</a>
-            <a href="#blogs">Blog Posts</a>
+            <a href="https://www.zacharycorbishley.com/">Home</a>
+            <a href="https://www.zacharycorbishley.com/blog/site-architecture.html">Site Architecture</a>
          </nav>
       </header>
       <!-- Hero Section -->
@@ -168,47 +122,54 @@
       </div>
       <!-- Main Container -->
       <div class="container">
-      <title>Frontend Calling API</title>
-      <script>
-         // Function to call your API
-         async function callApi() {
-           try {
-             const response = await fetch('https://api.zacharycorbishley.com/hello-world', {
-               method: 'GET', // or 'POST' depending on your API method
-               headers: {
-                 'Content-Type': 'application/json',
-                 // Add other headers here if needed (e.g., Authorization)
-               }
-             });
-         
-             if (!response.ok) {
-               throw new Error('API call failed');
-             }
-         
-             const data = await response.json();
-             console.log('API Response:', data);
-         
-             // Use the data as needed in your frontend
-             document.getElementById('api-response').innerText = JSON.stringify(data);
-           } catch (error) {
-             console.error('Error:', error);
-           }
-         }
-         
-         // Call API when the page is loaded
-         window.onload = callApi;
-      </script>
-      </head>
-      <body>
+        <script>
+            // Function to call your API
+            async function callApi() {
+              try {
+                const response = await fetch('https://api.zacharycorbishley.com/hello-world', {
+                  method: 'GET', // or 'POST' depending on your API method
+                  headers: {
+                    'Content-Type': 'application/json',
+                    // Add other headers here if needed (e.g., Authorization)
+                  }
+                });
+            
+                if (!response.ok) {
+                  throw new Error('API call failed');
+                }
+            
+                const data = await response.json();
+                console.log('API Response:', data);
+            
+                // Use the data as needed in your frontend
+                document.getElementById('api-response').innerText = JSON.stringify(data);
+              } catch (error) {
+                console.error('Error:', error);
+              }
+            }
+            
+            // Call API when the page is loaded
+            window.onload = callApi;
+         </script>
+         <!-- API Section -->
          <h1>API Response</h1>
          <pre id="api-response">Loading...</pre>
-         <img src="https://s3.us-east-1.amazonaws.com/www.zacharycorbishley.com/images/blog-folio-arch.1.0.svg" alt="Diagram">
+         <!-- Diagram Section -->
+         <div class="diagram-section">
+            <h2>Architecture Diagram</h2>
+            <img src="https://s3.us-east-1.amazonaws.com/www.zacharycorbishley.com/images/blog-folio-arch.1.0.svg" alt="Site Architecture Diagram">
+            <div class="diagram-info">
+               <h3>About the Diagram</h3>
+               <p>
+                  Add information here about what the diagram represents. For example, explain the components of the architecture,
+                  the technologies used, or the design principles behind it.
+               </p>
+            </div>
+         </div>
+      </div>
+      <!-- Footer -->
+      <footer>
+         &copy; 2025 Zachary Corbishley. All rights reserved.
+      </footer>
    </body>
-</html>
-<div>
-<!-- Footer -->
-<footer>
-   &copy; 2025 Zachary Corbishley. All rights reserved.
-</footer>
-</body>
 </html>

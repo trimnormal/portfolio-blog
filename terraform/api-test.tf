@@ -1,3 +1,49 @@
+import {
+  to = aws_lambda_function.test_lambda
+  id = "hello-world"
+}
+
+import {
+  to = aws_iam_role.hello_world
+  id = "hello-world-role-8jne9vej"
+}
+
+import {
+  to = aws_apigatewayv2_api.example
+  id = "6bteve33xi"
+}
+
+import {
+  to = aws_apigatewayv2_api_mapping.example
+  id = "t2c3j0/api.zacharycorbishley.com"
+}
+
+import {
+  to = aws_apigatewayv2_deployment.example
+  id = "6bteve33xi/0hucor"
+}
+#lot of these from auto ^
+
+import {
+  to = aws_apigatewayv2_domain_name.example
+  id = "api.zacharycorbishley.com"
+}
+
+import {
+  to = aws_apigatewayv2_integration.example
+  id = "6bteve33xi/bls65ba"
+}
+
+import {
+  to = aws_apigatewayv2_route.example
+  id = "6bteve33xi/shlj9s6"
+}
+
+import {
+  to = aws_apigatewayv2_stage.example
+  id = "6bteve33xi/$default"
+}
+
 # __generated__ by Terraform
 # Please review these resources and move them into your main configuration files.
 
@@ -68,7 +114,7 @@ resource "aws_apigatewayv2_integration" "example" {
   integration_type              = "AWS_PROXY"
   integration_uri               = "arn:aws:lambda:us-east-1:953170553831:function:hello-world"
   passthrough_behavior          = null
-  payload_format_version        = jsonencode(2)
+  payload_format_version        = "2.0"
   request_parameters            = {}
   request_templates             = {}
   template_selection_expression = null
@@ -118,9 +164,9 @@ resource "aws_lambda_function" "test_lambda" {
   architectures                      = ["x86_64"]
   code_signing_config_arn            = null
   description                        = null
-  filename                           = null
+  filename                           = "./hello-world/lambda.zip"
   function_name                      = "hello-world"
-  handler                            = "lambda_function.lambda_handler"
+  handler                            = "hello-world.lambda_handler"
   image_uri                          = null
   kms_key_arn                        = null
   layers                             = []
